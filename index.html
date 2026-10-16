@@ -11,15 +11,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
-  --bg:#F5F8FD;
+  --bg:#F6F7F9;
   --surface:#FFFFFF;
-  --ink:#0F1E3D;
-  --muted:#56658A;
-  --line:#DCE4F2;
+  --ink:#141922;
+  --muted:#5C6371;
+  --line:#E3E6EB;
   --blue:#2350E8;
   --blue-deep:#1638B0;
   --sky:#E6EEFF;
-  --sky-2:#F0F5FF;
+  --sky-2:#F6F7F9;
   --marker:#FFE07A;
   --radius-lg:22px;
   --radius-md:14px;
@@ -35,7 +35,7 @@ a{color:inherit}
 .mk{background:linear-gradient(transparent 58%,var(--marker) 58%,var(--marker) 92%,transparent 92%);padding:0 2px}
 
 /* nav */
-header.top{position:sticky;top:0;z-index:20;background:rgba(245,248,253,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.top{position:sticky;top:0;z-index:20;background:rgba(246,247,249,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
 header.top.scrolled{border-bottom-color:var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;text-decoration:none;font-size:17px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
@@ -334,6 +334,45 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
   html{scroll-behavior:auto}
   .badge{animation:none}
 }
+
+/* v2: clear section breaks + blue as point color only */
+.sec-head{max-width:none}
+.sec-head h2,.sec-head p{max-width:720px}
+.sec-head:has(p.lines) p{max-width:none}
+.kicker{display:flex;align-items:baseline;gap:16px;width:100%;font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.04em;color:var(--ink);padding-top:24px;border-top:2px solid var(--ink);margin-bottom:20px;line-height:1.2}
+.kicker b{font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--blue);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.sec-head h2{font-size:clamp(18px,2vw,22px);color:var(--ink);font-weight:700}
+#cases,.career,#numbers{padding-bottom:40px}
+section.sec+section.sec{padding-top:96px}
+.kicker em{margin-left:auto;font-style:normal;font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--muted)}
+.career{background:var(--bg);border:0}
+.hello{color:var(--ink)}
+nav a:hover{color:var(--ink);background:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);color:var(--ink)}
+.chip{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.thread{color:#B9BFC9}
+.stage-h em{background:var(--ink)}
+.filters button:hover{border-color:var(--ink);color:var(--ink)}
+.case-meta .cat{color:var(--ink);background:var(--bg);border:1px solid var(--line)}
+.steps li:last-child b{color:var(--ink)}
+.visual{background:var(--bg)}
+.visual h4,.q3-h,.duty-detail h4,.edu-col h3{color:var(--ink)}
+.arr{color:var(--muted)}
+.more,.duty-more summary{color:var(--ink);background:var(--surface);border:1px solid var(--line)}
+.more:hover,.duty-more summary:hover{border-color:var(--ink)}
+.case:not(.open):hover{border-color:#B9BFC9}
+.all-projects>summary span{color:var(--muted)}
+.all-projects>summary::after{border-color:var(--muted)}
+.all-projects>summary:hover{border-color:var(--ink)}
+.study-link{background:var(--ink)}.study-link:hover{background:#000}
+.job-side .per .now{background:var(--ink)}
+.win{background:var(--bg)}.win strong{color:var(--ink)}
+.duty-grid li::before{background:#B9BFC9}
+.kws span{background:var(--bg);color:var(--ink);border:1px solid var(--line);font-weight:500}
+.link-card:hover{border-color:var(--ink)}
+.contact{background:var(--ink)}
+.contact a.mail{color:var(--ink)}.contact a.mail:hover{background:#E9ECF1}
+@media (max-width:600px){.kicker em{display:none}}
 </style>
 </head>
 <body>
@@ -405,7 +444,7 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
 <section class="sec" id="numbers" style="padding-top:24px">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">숫자로 본 4년 9개월</span>
+      <span class="kicker"><b>01</b>숫자로 본 4년 9개월<em>NUMBERS</em></span>
       <h2>구성원이 회사를 만나고 성장하는 모든 단계에서 결과를 냈습니다.</h2>
       <p>단계마다 대표 성과 하나씩 골랐습니다. 자세한 과정은 아래 프로젝트에 있습니다.</p>
     </div>
@@ -427,7 +466,7 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
 <section class="sec" id="cases" style="padding-top:40px">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">프로젝트</span>
+      <span class="kicker"><b>02</b>프로젝트<em>PROJECTS</em></span>
       <h2>문제를 어떻게 발견했고, 무엇을 바꿨는지.</h2>
       <p class="lines"><span>대표 프로젝트 7개입니다.</span><span>카드를 누르면 배경, 실행, 결과를 볼 수 있고, 분야별 대표 3개는 케이스 스터디로 더 깊게 정리했습니다.</span></p>
     </div>
@@ -513,7 +552,7 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
         <p class="hl">수습 평가 제도 신규 도입<small>FLEX 이관으로 평가 수작업 0</small></p>
         <ul class="steps">
           <li><b>배경</b><span>신규 입사자가 회사와 맞는지 검증할 공식 절차가 없어, 정규직 전환을 판단할 근거가 없었습니다.</span></li>
-          <li><b>실행</b><span>3개월 수습 제도를 도입하고 평가 항목, 시점, 평가 주체를 정해 행동 기반 문항으로 설계했습니다. 이후 FLEX 밖에서 공지, 평가표 복제, 권한 부여, 취합을 손으로 하던 과정을 FLEX 안으로 옮겨 시스템에서 처리되게 했습니다.</span></li>
+          <li><b>실행</b><span>3개월 수습 제도를 도입하고 평가 항목, 시점, 평가 주체를 정해 행동 기반 문항으로 설계했습니다. 이후 별도 문서로 공지, 평가표 복제, 권한 부여, 취합을 손으로 하던 과정을 FLEX로 옮겨 시스템에서 처리되게 했습니다.</span></li>
           <li><b>결과</b><span>문항별 평균과 평가 의견을 근거로 정규직 전환을 판단하는 체계가 생겼고, 평가 시기마다 들던 수작업이 사라졌습니다. 수습 운영 정책 문서도 함께 개정했습니다.</span></li>
         </ul>
       </article>
@@ -538,7 +577,7 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
 <section class="sec career" id="career">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">경력</span>
+      <span class="kicker"><b>03</b>경력<em>CAREER</em></span>
       <h2>헤드헌터로 시작해, 스타트업의 HR 전반을 맡아왔습니다.</h2>
     </div>
 
@@ -592,7 +631,7 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
 <section class="sec" aria-labelledby="edu-title">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">배움</span>
+      <span class="kicker"><b>04</b>배움<em>EDUCATION</em></span>
       <h2 id="edu-title">상담심리에서 출발해, HR을 계속 공부하고 있습니다.</h2>
     </div>
     <div class="edu-grid">
