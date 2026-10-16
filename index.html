@@ -11,15 +11,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
-  --bg:#F6F7F9;
+  --bg:#FFFFFF;
   --surface:#FFFFFF;
   --ink:#141922;
   --muted:#5C6371;
-  --line:#E3E6EB;
+  --line:#E3E8F1;
   --blue:#2350E8;
   --blue-deep:#1638B0;
   --sky:#E6EEFF;
-  --sky-2:#F6F7F9;
+  --sky-2:#F3F6FD;
   --marker:#FFE07A;
   --radius-lg:22px;
   --radius-md:14px;
@@ -35,7 +35,7 @@ a{color:inherit}
 .mk{background:linear-gradient(transparent 58%,var(--marker) 58%,var(--marker) 92%,transparent 92%);padding:0 2px}
 
 /* nav */
-header.top{position:sticky;top:0;z-index:20;background:rgba(246,247,249,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
 header.top.scrolled{border-bottom-color:var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-weight:800;text-decoration:none;font-size:17px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
@@ -345,34 +345,43 @@ footer{padding:8px 0 28px;color:var(--muted);font-size:13px}
 #cases,.career,#numbers{padding-bottom:40px}
 section.sec+section.sec{padding-top:96px}
 .kicker em{margin-left:auto;font-style:normal;font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--muted)}
-.career{background:var(--bg);border:0}
+.career{background:#F5F8FD;border:0}
+#cases,section.sec[aria-labelledby="edu-title"]{background:#fff}
+.case,.board,.story-box,.edu-grid{border-color:var(--line);box-shadow:0 1px 2px rgba(15,30,61,.04)}
 .hello{color:var(--ink)}
 nav a:hover{color:var(--ink);background:var(--line)}
 .btn.ghost:hover{border-color:var(--ink);color:var(--ink)}
-.chip{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
-.thread{color:#B9BFC9}
+.chip{background:var(--sky);color:var(--blue-deep);border:0}
+.thread{color:var(--blue);opacity:.55}
 .stage-h em{background:var(--ink)}
 .filters button:hover{border-color:var(--ink);color:var(--ink)}
-.case-meta .cat{color:var(--ink);background:var(--bg);border:1px solid var(--line)}
+.case-meta .cat{color:var(--blue-deep);background:var(--sky);border:0}
 .steps li:last-child b{color:var(--ink)}
-.visual{background:var(--bg)}
+.visual{background:var(--sky-2)}
 .visual h4,.q3-h,.duty-detail h4,.edu-col h3{color:var(--ink)}
 .arr{color:var(--muted)}
-.more,.duty-more summary{color:var(--ink);background:var(--surface);border:1px solid var(--line)}
-.more:hover,.duty-more summary:hover{border-color:var(--ink)}
+.more,.duty-more summary{color:var(--blue-deep);background:var(--surface);border:1px solid var(--line)}
+.more:hover,.duty-more summary:hover{border-color:var(--blue)}
 .case:not(.open):hover{border-color:#B9BFC9}
 .all-projects>summary span{color:var(--muted)}
 .all-projects>summary::after{border-color:var(--muted)}
 .all-projects>summary:hover{border-color:var(--ink)}
 .study-link{background:var(--ink)}.study-link:hover{background:#000}
 .job-side .per .now{background:var(--ink)}
-.win{background:var(--bg)}.win strong{color:var(--ink)}
-.duty-grid li::before{background:#B9BFC9}
-.kws span{background:var(--bg);color:var(--ink);border:1px solid var(--line);font-weight:500}
+.win{background:var(--sky-2);border:0}.win strong{color:var(--ink)}
+.duty-grid li::before{background:var(--blue)}
+.kws span{background:var(--sky);color:var(--blue-deep);border:0;font-weight:600}
 .link-card:hover{border-color:var(--ink)}
-.contact{background:var(--ink)}
-.contact a.mail{color:var(--ink)}.contact a.mail:hover{background:#E9ECF1}
+.contact{background:var(--blue)}
+
 @media (max-width:600px){.kicker em{display:none}}
+
+.career .job,.career .job:first-of-type{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44px;margin-top:20px;box-shadow:0 2px 10px -4px rgba(15,30,61,.08)}
+.career .job-side{padding-right:28px;border-right:1px solid var(--line);align-self:stretch;position:static}
+.career .job-side .co{font-size:24px}
+.duty-detail{background:var(--sky-2)}
+.duty-grid h4{border-bottom-color:var(--blue)}
+@media (max-width:880px){.career .job,.career .job:first-of-type{padding:26px 22px}.career .job-side{border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:20px}}
 </style>
 </head>
 <body>
