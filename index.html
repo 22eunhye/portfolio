@@ -57,7 +57,7 @@ nav a:hover{color:var(--blue);background:var(--sky)}
 @media (min-width:881px){.lead span{white-space:nowrap}}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
 .btn{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
-.btn.primary{background:var(--blue);color:#fff;box-shadow:0 8px 24px -10px rgba(35,80,232,.7)}
+.btn.primary{background:var(--blue);color:#fff;box-shadow:0 8px 24px -10px rgba(35,80,232,.5)}
 .btn.primary:hover{background:var(--blue-deep)}
 .btn.ghost{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
 .btn.ghost:hover{border-color:var(--blue);color:var(--blue)}
@@ -382,6 +382,24 @@ nav a:hover{color:var(--ink);background:var(--line)}
 .duty-detail{background:var(--sky-2)}
 .duty-grid h4{border-bottom-color:var(--blue)}
 @media (max-width:880px){.career .job,.career .job:first-of-type{padding:26px 22px}.career .job-side{border-right:0;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:20px}}
+
+/* v3 palette: warm neutral + one accent */
+.badge-top .eyebrow,.badge-top small{color:#BFD0F7}
+.avatar{background:var(--sky);color:var(--blue-deep)}
+.chip,.case-meta .cat,.kws span{background:var(--sky-2);color:var(--ink);border:0}
+.more,.duty-more summary{color:var(--ink)}
+.more:hover,.duty-more summary:hover{border-color:var(--ink)}
+.duty-grid h4{border-bottom-color:var(--ink)}
+.duty-grid li::before{background:var(--blue)}
+.contact a.mail{color:var(--ink)}
+.study-link{background:var(--ink)}
+.visual{background:var(--sky-2)}
+.win{background:var(--sky-2)}.win strong{color:var(--ink)}
+
+.hero h1 .q{color:var(--ink)}
+.hero h1 .ul{background:linear-gradient(transparent 62%,rgba(35,80,232,.16) 62%,rgba(35,80,232,.16) 94%,transparent 94%);padding:0 2px}
+.badge-top{padding-bottom:26px}
+.badge-body{padding-top:24px}
 </style>
 </head>
 <body>
@@ -404,7 +422,7 @@ nav a:hover{color:var(--ink);background:var(--line)}
   <div class="wrap">
     <div>
       <p class="hello"><span aria-hidden="true">👋</span>안녕하세요, HR Generalist 김은혜입니다</p>
-      <h1><span class="h1l"><span class="q">“이 회사, 다니기 참 좋다”</span>는</span><span class="h1l">말이 나오는 구조를 만듭니다.</span></h1>
+      <h1><span class="h1l"><span class="q">“이 회사, <span class="ul">다니기 참 좋다</span>”</span>는</span><span class="h1l">말이 나오는 구조를 만듭니다.</span></h1>
       <p class="lead"><span>채용부터 온보딩, 조직문화, 퇴사면담까지 인재 여정의 처음과 끝을 직접 설계해왔습니다.</span><span>공고 한 장, 안내서 하나도 “한 번에 이해되게” 만들고,</span><span>반복되는 일은 자동화해서 HR이 사람에게 집중할 수 있는 환경을 만듭니다.</span></p>
       <div class="cta">
         <a class="btn primary" href="#numbers">숫자로 보기</a>
@@ -419,13 +437,12 @@ nav a:hover{color:var(--ink);background:var(--line)}
         <div class="badge-top">
           <small>PEOPLE &amp; CULTURE</small>
         </div>
-        <div class="avatar"><span aria-hidden="true">은혜</span></div>
         <div class="badge-body">
           <p class="nm">김은혜</p>
           <p class="rl">채용, 조직문화, HR 자동화</p>
           <dl>
             <dt>경력</dt><dd>4년 9개월</dd>
-            <dt>현재</dt><dd>티니어 경영지원</dd>
+            <dt>현재</dt><dd>티니어 경영지원파트</dd>
             <dt>전공</dt><dd>상담심리학</dd>
           </dl>
           <div class="chips">
@@ -593,10 +610,10 @@ nav a:hover{color:var(--ink);background:var(--line)}
     <article class="job">
       <div class="job-side">
         <p class="co">티니어</p>
-        <p class="role">경영지원 · HR Generalist</p>
+        <p class="role">경영지원파트 · HR Generalist</p>
         <p class="per">2025.05 – 현재 <span class="now">재직 중</span></p>
         <p class="about">말하는 번역기, 첫화면날씨, 디자인키보드 등 생활밀착형 AI·모바일 서비스를 개발하고 운영하는 IT 기업</p>
-        <div class="tools"><span>Claude</span><span>Jira</span><span>Flex</span><span>Slack</span><span>그리팅</span><span>ClickUp</span><span>Notion</span><span>Figma</span></div>
+        <div class="tools"><span>Claude</span><span>ChatGPT</span><span>GitHub</span><span>Jira</span><span>Flex</span><span>Slack</span><span>그리팅</span><span>ClickUp</span><span>Notion</span><span>Figma</span></div>
       </div>
       <div>
         <div class="duty-grid"><div><h4>채용</h4><div class="kws"><span>채용 A to Z</span><span>공고 개편</span><span>아웃바운드 소싱</span><span>그리팅 채용 홈페이지</span><span>채널별 KPI 리포트</span><span>면접관 가이드</span></div></div><div><h4>인사·제도</h4><div class="kws"><span>취업규칙 개편</span><span>수습 제도</span><span>징계위원회 구축</span><span>유연근무·반반반차</span><span>모성보호 제도</span><span>스톡옵션 관리</span></div></div><div><h4>조직문화</h4><div class="kws"><span>P&amp;C 원온원</span><span>티타민</span><span>EAP 도입</span><span>사내 동호회</span><span>MVC 내재화</span></div></div><div><h4>운영·자동화</h4><div class="kws"><span>근태·채용 자동 리포트</span><span>Slack 근무 상태 연동</span><span>노션 구조 재설계</span><span>오피스 이전</span></div></div></div><details class="duty-more"><summary>상세 업무 보기</summary><div class="duty-detail"><div><h4>채용</h4><ul><li>채용 프로세스 A to Z 기획·운영, 그리팅·사람인·잡코리아·원티드 운영</li><li>그리팅 채용 홈페이지 구축, 채용 절차 · 결과 안내 시점 · 면접 방식 · 수습 기간 등 지원자 Q&amp;A 정리</li><li>실제 업무와 다르던 직무명(광고 수익화 담당자)을 업무와 수요 키워드를 조합한 ‘수익 전략 매니저’로 바꾸고, 은어로 쓰인 직무 설명과 문체를 개편해 지원자 11명 → 157명(1개월, 약 14배)</li><li>다이렉트 서칭과 포지션 제안으로 1년 넘은 공석을 1개월 만에 채용, 수수료 400만 원 절감</li><li>인서울 상위 10개 이상 대학 취업 사이트 신규 등록</li><li>지원자 232명 데이터로 단계별 전환율·플랫폼별 합격률 KPI 관리</li><li>사람인·잡코리아·원티드 주간 지원·조회·경력 분포와 그리팅 스크리닝 통과율을 묶은 채널별 주간 리포트 운영, 리멤버·링크드인 도입 비용 비교</li><li>면접관 가이드 제작·교육, 오퍼레터 개선</li></ul></div><div><h4>인사·제도</h4><ul><li>3개월 수습 평가 제도 도입, 행동 기반 문항 설계 후 FLEX로 이관</li><li>근로계약서·취업규칙 법령 기준 전면 개편</li><li>징계위원회 운영 규칙·진행 스크립트·양식·기록 체계 신규 구축</li><li>유연근무제(8~10시 자율 출근, 주 1회 재택)와 1시간 반반반차 도입</li><li>임신·출산·육아 제도를 시기별로 통합 문서화, 임신기 재택 기준 조정</li><li>연차 촉진을 FLEX 자동 촉진으로 전환, 연 2회 정례화</li><li>스톡옵션 계약 대상자 전수 점검, 입사 1년 도래자 관리 시트 구축</li></ul></div><div><h4>조직문화</h4><ul><li>P&amp;C 원온원 7개 카테고리 구조화, 이슈 약 95% 해결</li><li>원온원 결과로 1분 단위 유연근무제(만족도 100%), 재택 가능 요일 확대, 정책 공지 시 배경 설명(개선 응답 90%), EAP 심리상담 도입</li><li>기존 우수사원 투표에 대한 설문(개선 필요 89%)을 근거로 Flex 칭찬 기반 상시 인정 제도 ‘티타민’으로 전환</li><li>공식 지원 없이 사내 동호회 창설, 구성원 50% 참여, 공식 복지 편입 추진</li><li>워크샵, 타운홀, 분기 리뷰, 친목데이 운영, MVC 내재화 프로그램 기획</li></ul></div><div><h4>운영·자동화</h4><ul><li>근태 점검 일일 리포트, 채용 현황 주간 공유, 주간 인사·노무·채용 브리핑 등 반복 업무 5종 자동화, 채용 집계와 근태 점검에서 월 약 10시간 절감</li><li>Apps Script로 Flex 휴가·재택·세미나 상태를 Slack 프로필에 자동 표시·해제</li><li>회사 노션을 5개 카테고리로 재설계하고 전 문서 전수 점검</li><li>오피스 이전 기획, 커피챗 공간 신설</li><li>온라인 명함 신청 시스템 도입, 경영지원 업무 허브 구축</li></ul></div></div></details>
@@ -647,7 +664,7 @@ nav a:hover{color:var(--ink);background:var(--line)}
       <div class="edu-col">
         <h3>학력</h3>
         <ul>
-          <li><b><span class="blur" aria-label="비공개">○○대학교 ○○○○학과</span></b><span>학사, 2016.03 – 2021.08 졸업</span></li>
+          <li><b>루터대학교 상담심리학과</b><span>학사, 2016.03 – 2021.08 졸업</span></li>
         </ul>
       </div>
       <div class="edu-col">
