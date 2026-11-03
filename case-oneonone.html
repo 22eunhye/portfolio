@@ -117,6 +117,16 @@ h2 em{font-style:normal;color:var(--blue)}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;align-items:start}
 .shots>:only-child{grid-column:1/-1;max-width:640px}
 .shots.stack{grid-template-columns:1fr;gap:24px}.shots.stack>*{max-width:none}
+.html-shot{padding:24px 26px}.hs-t{font-size:15px!important;font-weight:800;color:var(--ink)!important;margin:0 0 18px!important}
+.catchart .cr{display:grid;grid-template-columns:118px 1fr 40px;gap:12px;align-items:center;padding:7px 0;font-size:13.5px}
+.catchart .cr span{color:var(--muted)}.catchart .cb{height:12px;background:var(--sky-2);border-radius:999px;overflow:hidden}.catchart .cb i{display:block;height:100%;background:#C9D3E6;border-radius:999px}
+.catchart .cr b{font-variant-numeric:tabular-nums;text-align:right;color:var(--muted)}.catchart .low span,.catchart .low b{color:var(--blue-deep);font-weight:700}.catchart .low .cb i{background:var(--blue)}
+.cnote{font-size:12px;color:var(--muted);margin-top:12px}
+.rescard{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--surface)}.rc-h{font-weight:800;font-size:14.5px}.rc-p{font-size:13.5px;color:var(--muted);margin:6px 0 16px}
+.stack{display:flex;height:30px;border-radius:8px;overflow:hidden;font-size:12px;font-weight:700}.stack i{font-style:normal;display:grid;place-items:center;color:#fff}.stack .s1{background:var(--blue)}.stack .s2{background:#7E9BF0}.stack .s3{background:#C9D3E6;color:var(--ink)}
+.lg{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 14px;font-size:12.5px;color:var(--muted)}.lg em{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}.lg .s1{background:var(--blue)}.lg .s2{background:#7E9BF0}.lg .s3{background:#C9D3E6}
+.rc-l{margin:0;padding:12px 0 0;border-top:1px dashed var(--line);list-style:none;font-size:13.5px}.rc-l li{padding:3px 0}.rc-l b{color:var(--ink)}
+@media (max-width:600px){.catchart .cr{grid-template-columns:96px 1fr 34px;font-size:12.5px}}
 .real-shot{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px;overflow:hidden}
 .real-shot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
 .real-shot figcaption{font-size:13px;color:var(--muted);margin-top:10px}
@@ -181,7 +191,7 @@ footer{padding:24px 0 40px;color:var(--muted);font-size:13px}
       <dt>SITUATION <span>· 상황</span></dt><dd>전 구성원과 원온원을 하면 바로 할 수 있는 것, 시간이 걸리는 것, 구조적인 과제가 한꺼번에 쏟아집니다. 2025년에만 29개의 이슈가 나왔습니다.</dd>
       <dt>TURNING POINT <span>· 판단 지점</span></dt><dd>모든 의견을 같은 무게로 다루면 아무것도 끝나지 않는다고 판단했습니다. 다수가 공통으로 말한 의견을 중심으로 우선순위를 정하고, 평가·리더십·R&R처럼 구조적인 과제는 장기 과제로 분리했습니다.</dd>
     </dl><dl class="resp"><dt>RESPONSE <span>· 대응</span></dt><dd>우선순위대로 단계적으로 조치하고, 구성원에게는 무엇이 반영됐고 무엇이 아직 어려운지 결과 공유 공지로 투명하게 알렸습니다. 다음 해 원온원에서는 작년 이슈가 실제로 나아졌는지 다시 물었습니다.</dd></dl></div>
-    <div class="side"><div class="todo"><b>은혜님이 채울 부분</b>조치 중 가장 설득이 어려웠던 건 무엇이었나요? (예: 1분 단위 유연근무제나 재택 요일 확대를 대표에게 제안했을 때의 반응과 설득 근거)</div><div class="todo"><b>은혜님이 채울 부분</b>결과를 구성원에게 공유할 때 “아직 해결 못 한 것”까지 알리기로 한 이유가 있다면 적어주세요. 신뢰를 지키는 판단으로 보여줄 수 있습니다.</div></div>
+    <div class="side"><div class="ctx persuade"><h3>바로 풀리지 않는 이슈</h3><div class="bar"></div><p class="lead-in">평가처럼 회사가 가려는 방향과 구성원이 원하는 방향이 다른 이슈는 한 번에 결론을 내기 어려웠습니다. 이런 이슈는 덮어두지 않고, 구성원 원온원과 CEO 타운홀에서 서로의 입장을 나누며 의견을 맞춰가고 있습니다.</p></div></div>
   </div>
 </div></section>
 
@@ -192,7 +202,7 @@ footer{padding:24px 0 40px;color:var(--muted);font-size:13px}
   <div class="results"><div class="res"><strong>90%</strong><span>정책 공지에 배경과 이유를 함께 설명한 뒤 “개선됐다”고 답한 구성원</span></div><div class="res"><strong>100%</strong><span>30분 단위 출근 선택을 1분 단위 유연근무제로 바꾼 뒤 만족도</span></div><div class="res"><strong>76%</strong><span>2025년 제기된 29개 이슈 중 조치한 비율 (완전 해결 38%, 진행 중 38%)</span></div></div>
   
   <div class="after-note"><h4>그 이후</h4><p>재택 가능 요일 확대, 1시간 단위 반반반차, 외부 심리상담(EAP), 지라 도입처럼 운영 방식 전반으로 개선이 이어졌습니다. 2026년 원온원에서는 ‘정책 납득’과 ‘정보 공유’ 점수가 가장 낮다는 걸 확인해 다음 개선 과제로 삼았고, 해결되지 않은 24%는 대부분 평가·리더십·R&R 같은 장기 과제로 이어가고 있습니다.</p></div>
-  <div class="shots "><div class="shot"><div><b>캡처 자리 · 원온원 카테고리별 점수</b><span>7개 카테고리 점수 비교 화면, 개인 의견 원문은 제외</span></div></div><div class="shot"><div><b>캡처 자리 · 결과 공유 공지</b><span>구성원에게 보낸 개선 이행 결과 공지, 이름은 가림</span></div></div></div>
+  <div class="shots "><figure class="real-shot html-shot"><figcaption class="hs-t">원온원 카테고리별 평균 점수</figcaption><div class="catchart"><div class="cr"><span>복지 및 근무 제도</span><div class="cb"><i style="width:87.4%"></i></div><b>4.37</b></div><div class="cr"><span>건강 및 생활 지원</span><div class="cb"><i style="width:84.0%"></i></div><b>4.20</b></div><div class="cr"><span>업무 환경 및 역할</span><div class="cb"><i style="width:75.4%"></i></div><b>3.77</b></div><div class="cr"><span>성장 및 업무 환경</span><div class="cb"><i style="width:72.6%"></i></div><b>3.63</b></div><div class="cr"><span>기타 운영</span><div class="cb"><i style="width:67.4%"></i></div><b>3.37</b></div><div class="cr low"><span>의사결정 및 협업</span><div class="cb"><i style="width:65.4%"></i></div><b>3.27</b></div><div class="cr low"><span>조직 간 소통</span><div class="cb"><i style="width:64.6%"></i></div><b>3.23</b></div><div class="cnote">5점 만점 · 2026 원온원 20명 응답 · 낮은 두 영역 강조</div></div><figcaption>복지·근무 제도 만족은 높았고, 의사결정·소통 영역이 다음 개선 과제로 확인됐습니다.</figcaption></figure><figure class="real-shot html-shot"><figcaption class="hs-t">구성원 결과 공유 공지</figcaption><div class="rescard"><div class="rc-h">[공지] P&amp;C 원온원 결과 공유</div><p class="rc-p">2025년 원온원에서 나온 29개 문제를 올해 어떻게 처리했는지, 해결하지 못한 것까지 함께 공유했습니다.</p><div class="stack"><i class="s1" style="width:38%">38%</i><i class="s2" style="width:38%">38%</i><i class="s3" style="width:24%">24%</i></div><div class="lg"><span><em class="s1"></em>완전 해결 11개</span><span><em class="s2"></em>진행 중 11개</span><span><em class="s3"></em>미해결 7개</span></div><ul class="rc-l"><li><b>정책 공지 Why 설명</b> · 90% “개선됐다”</li><li><b>1분 단위 유연근무</b> · 만족도 100%</li><li><b>재택 요일 확대 · EAP · 지라 도입</b></li></ul></div><figcaption>작년 문제 29개의 처리 결과를 숫자로 정리해 전 구성원에게 공유했습니다.</figcaption></figure></div>
 </div></section>
 
 <div class="wrap"><nav class="next" aria-label="다른 케이스"><a href="case-recruiting.html"><small>이전 케이스</small><b>채용 공고 개편</b></a><a href="case-probation.html"><small>다음 케이스</small><b>수습 평가 제도</b></a></nav></div>
