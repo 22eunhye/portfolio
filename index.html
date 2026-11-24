@@ -419,6 +419,34 @@ nav a:hover{color:var(--ink);background:var(--line)}
 .pr{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 @media (hover:hover){.pr:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 40px -22px rgba(15,30,61,.35);border-color:#C9D3E6}.pr.pr-key:hover{border-color:var(--blue)}}
 @media (prefers-reduced-motion:reduce){.pr{transition:none}.pr:hover{transform:none}}
+
+/* side work */
+.side-work{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px 44px;box-shadow:0 2px 10px -4px rgba(15,30,61,.08)}
+.sw-head{display:flex;justify-content:space-between;gap:32px;align-items:flex-start;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.sw-tag{margin:0 0 6px;font-size:13px;font-weight:700;color:var(--blue)}
+.side-work h3{margin:0 0 12px;font-size:24px;letter-spacing:-.03em}
+.sw-lead{margin:0;font-size:15px;line-height:1.8;color:var(--muted)}
+.sw-score{flex:none;text-align:right;line-height:1}
+.sw-score strong{font-size:48px;font-weight:800;color:var(--blue);letter-spacing:-.03em}
+.sw-score span{font-size:16px;color:var(--muted);margin-left:4px}
+.sw-score small{display:block;margin-top:8px;font-size:13px;color:var(--muted)}
+.sw-body{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;padding:28px 0}
+.sw-flow{list-style:none;margin:0;padding:0;counter-reset:sw;display:grid;gap:14px}
+.sw-flow li{counter-increment:sw;display:grid;grid-template-columns:28px 1fr;column-gap:12px}
+.sw-flow li::before{content:counter(sw);grid-row:span 2;width:28px;height:28px;border-radius:50%;background:var(--sky);color:var(--blue-deep);font-size:13px;font-weight:800;display:grid;place-items:center}
+.sw-flow b{font-size:15px}.sw-flow span{font-size:13.5px;color:var(--muted)}
+.sw-tags{display:grid;gap:10px;align-content:start}
+.sw-tags div{position:relative;display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:10px;background:var(--sky-2);overflow:hidden;font-size:14px}
+.sw-tags i{position:absolute;inset:0 auto 0 0;background:var(--sky)}
+.sw-tags span,.sw-tags b{position:relative;z-index:1}.sw-tags b{color:var(--blue-deep)}
+.sw-tags small{font-size:12px;color:var(--muted)}
+.sw-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sw-quotes blockquote{margin:0;padding:18px 20px;border-radius:14px;background:var(--sky-2);font-size:14px;line-height:1.7;color:var(--ink)}
+@media (max-width:880px){.side-work{padding:26px 22px}.sw-head{flex-direction:column;gap:16px}.sw-score{text-align:left}.sw-body{grid-template-columns:1fr;gap:24px}.sw-quotes{grid-template-columns:1fr}.sw-lead br{display:none}}
+.sw-result{margin-top:24px;padding:16px 20px;border-radius:14px;background:var(--sky);color:var(--ink);font-size:15px;line-height:1.7}
+.sw-result b{color:var(--blue-deep)}
+.sw-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.sw-chips em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--blue-deep);background:#fff;padding:4px 10px;border-radius:999px}
+.sw-quotes blockquote{display:flex;flex-direction:column;justify-content:space-between;gap:12px}.sw-quotes blockquote p{margin:0}.sw-quotes cite{font-style:normal;font-size:12.5px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -678,6 +706,33 @@ nav a:hover{color:var(--ink);background:var(--line)}
         <div class="duty-grid"><div><h4>채용·영업</h4><div class="kws"><span>헤드헌팅</span><span>채용 대행</span><span>고객사 영업</span></div></div><div><h4>교육</h4><div class="kws"><span>OJT 매뉴얼</span><span>팀 온보딩</span></div></div></div><details class="duty-more"><summary>상세 업무 보기</summary><div class="duty-detail"><div><h4>채용·영업</h4><ul><li>고객사·직무 분석 후 헤드헌팅과 플랫폼 병행으로 채용 대행 18건, 파견 48명 입사</li><li>사람인·잡코리아·알바몬 공고 500개 이상 제작, 후보자 DB 400개 이상 관리</li><li>신규 고객사 인바운드 영업, 수습 기간 중 매출 1,700만 원 이상</li></ul></div><div><h4>교육·행사</h4><ul><li>OJT 자료와 업무 매뉴얼 작성, 팀 온보딩 체계 수립</li><li>상반기 워크샵 기획·진행</li></ul></div></div></details>
       </div>
     </article>
+    <div class="side-work">
+      <div class="sw-head">
+        <div>
+          <p class="sw-tag">사이드 활동 · 숨고</p>
+          <h3>이력서·자기소개서 컨설팅</h3>
+          <p class="sw-lead">채용 담당자로 서류를 읽는 눈으로, 지원자 편에 서서 서류를 함께 만들었습니다. <br>대기업·중견·공기업·외국계·금융권·스타트업, 인사·기획·마케팅·디자인·재무 직무까지 도왔습니다.</p>
+        </div>
+        <div class="sw-score"><strong>4.9</strong><span>/ 5.0</span><small>후기 13건</small></div>
+      </div>
+      <div class="sw-result"><b>다시 찾아주신 분들도 있었고,</b> 대기업 인턴부터 중견기업, 스타트업까지 여러 곳에서 합격 소식을 받았습니다.<span class="sw-chips"><em>대기업 인턴 합격</em><em>중견기업 합격</em><em>스타트업 합격</em><em>재의뢰</em></span></div>
+      <div class="sw-body">
+        <ol class="sw-flow">
+          <li><b>1시간 인터뷰</b><span>설문지로 끝내지 않고 지원자의 경험을 직접 묻습니다</span></li>
+          <li><b>공고·문항 분석</b><span>이 기업이 어떤 사람을 원하는지부터 짚습니다</span></li>
+          <li><b>경험 재구성</b><span>지원자의 경험 중 무엇을 강조할지 정해 서류에 녹입니다</span></li>
+          <li><b>빠른 피드백</b><span>수정 요청을 끝까지 반영해 1~2일 안에 완성합니다</span></li>
+        </ol>
+        <div class="sw-tags">
+          <div><span>경험과 노하우가 많아요</span><i style="width:77%"></i><b>10</b></div>
+          <div><span>응대가 친절해요</span><i style="width:77%"></i><b>10</b></div>
+          <div><span>가격 대비 만족스러워요</span><i style="width:77%"></i><b>10</b></div>
+          <div><span>포인트를 잘 짚어줘요</span><i style="width:62%"></i><b>8</b></div>
+          <small>후기 13건 중 선택 수</small>
+        </div>
+      </div>
+      <div class="sw-quotes"><blockquote><p>“단순히 글을 다듬는 것이 아니라 ‘이 기업이 어떤 인재를 원하는지’, ‘내 경험 중 어떤 부분을 강조하면 좋을지’를 명확하게 알 수 있었어요.”</p><cite>윤** · 대기업 · 마케팅</cite></blockquote><blockquote><p>“설문지에서 그치는 것이 아닌, 개별 상담으로 진행 후 작업이 진행되어 더욱 저에 대해 잘 반영해주시는 것 같습니다.”</p><cite>문** · 대기업·중견 · 인사</cite></blockquote><blockquote><p>“늘 스스로 가진 역량이 부족하다고만 생각했는데, 제가 준비하고 경험한 것들이 충분하다고 계속 말해 주셔서 자신감도 얻었어요.”</p><cite>설** · 중소기업 · 기획</cite></blockquote><blockquote><p>“형식적으로 첨삭해주시는 게 아니라 정말 저의 얘기도 꼼꼼히 듣고, 지원하는 기업에서 원하는 포인트들로 잘 작성될 수 있도록 봐주세요.”</p><cite>홍** · 이력서/자소서</cite></blockquote><blockquote><p>“자소서만 요청드렸는데 이력서랑 포폴까지 봐주시는 정성. 피드백이 매우 빨라서 작업이 하루 만에 끝났습니다.”</p><cite>장** · 대기업 · 기획</cite></blockquote><blockquote><p>“지난번에 좋은 결과를 받아서 면접까지 진행했습니다. 그 경험을 바탕으로 이번에도 다시 한 번 도움을 청했습니다.”</p><cite>문** · 재의뢰</cite></blockquote></div>
+    </div>
   </div>
 </section>
 
